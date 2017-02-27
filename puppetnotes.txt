@@ -1,3 +1,32 @@
 # Command to start puppet
 /opt/puppetlabs/bin/puppet resource service puppet ensure=running enable=true 
 
+
+
+
+
+
+#######################################################################################
+#############################Puppet trobleshooting tips################################
+
+if we try to run puppet with non authorised user, it will show certificate mismatch like below:
+
+i97578@wpobdnode11:~$ puppet agent -t
+Info: Creating a new SSL key for wpobdnode11.visu.verisk.com
+Info: Caching certificate for ca
+Info: Caching certificate for wpobdnode11.visu.verisk.com
+Error: Could not request certificate: The certificate retrieved from the master does not match the agent's private key.
+Certificate fingerprint: 08:D6:18:AD:7B:5B:96:05:7D:83:1A:44:70:B8:AE:B8:06:57:1B:76:0C:34:FF:E2:42:9F:5B:6F:85:61:03:5B
+To fix this, remove the certificate from both the master and the agent and then start a puppet run, which will automatically regenerate a certficate.
+On the master:
+  puppet cert clean wpobdnode11.visu.verisk.com
+On the agent:
+  1a. On most platforms: find /home/i97578/.puppetlabs/etc/puppet/ssl -name wpobdnode11.visu.verisk.com.pem -delete
+  1b. On Windows: del "/home/i97578/.puppetlabs/etc/puppet/ssl/wpobdnode11.visu.verisk.com.pem" /f
+  2. puppet agent -t
+
+Exiting; failed to retrieve certificate and waitforcert is disabled
+i97578@wpobdnode11:~$
+
+
+
