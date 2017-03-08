@@ -1,1 +1,6 @@
 using /proc/sys and sysctl to Modify and Set Kernel Runtime Parameters:
+
+
+cd /proc/sys/kernel
+
+sysctl -a
