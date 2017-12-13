@@ -4,3 +4,15 @@ using /proc/sys and sysctl to Modify and Set Kernel Runtime Parameters:
 cd /proc/sys/kernel
 
 sysctl -a
+
+* After upgrading the RHEL recently a chrony update has resulted in the time sync issues. It seems there needs to be some configuration update for chrony to sync time to the upstream ntp servers.
+
+======================================================SSL============================================================================
+Version that should be used: TLS 1.2
+
+
+
+
+
+helpful sites::
+https://www.sslshopper.com/article-most-common-openssl-commands.html
