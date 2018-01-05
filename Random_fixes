@@ -1,0 +1,6 @@
+####################CHANGE SCREEN RESOLUTON FOR RHEL/CENTOS7 TEXT###########################
+##For virtualbox console
+edit /etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT="nomodeset vga=788 console=tty0 console=ttyS0,115200n8
+grub2-mkconfig -o /boot/grub2/grub.cfg
+reboot
