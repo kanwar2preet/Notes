@@ -1,0 +1,21 @@
+openssl is bacically a toolkit which consists of number of utilities.
+
+If we build openssl package, private/ and certs/ directory will be empty.By default open ssl doesnot contain any root certificates.
+
+
+Key and Certifiacte Management: 
+
+3 steps: 
+
+1) Generate a strong private key.
+2) Create a Certificate signing request and send it to CA(certificat Authority).
+3) Install the CA provided certificate.
+
+Considerations for keys:
+
+Openssl supports RSA,DSA and ECDSA keys. Atleast try to use 2048.
+
+##use below command to generate keys:
+openssl genrsa -aes128 -out fd.key2048
+
+
