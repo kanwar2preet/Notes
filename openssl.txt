@@ -18,4 +18,37 @@ Openssl supports RSA,DSA and ECDSA keys. Atleast try to use 2048.
 ##use below command to generate keys:
 openssl genrsa -aes128 -out fd.key2048
 
+Some organistaions also spend to buy HSM which is designed to make any key extraction impossible even with physical access to the server. 
+To make this work, HSMs not only generate and store keys but also perform all necessary operations.
+
+
+Private keys are stored in the so-called PEM format, which is just Text.
+
+We can see a keys structure using the following rsa command.
+#  openssl rsa -text -in fd.key
+
+If we want to see only the public part of the key, use the below command:
+#openssl rsa -in fd.key -pubout -out fd-public.key
+
+DSA key generation is a two part process so we can use pipe to use single command at once.
+# openssl dsaparam -genkey 2048 | openssl dsa -out dsa.key -aes128
+
+
+CSR is a formal request asking a CA to sign a certificate and it contains public key of the entity requesting and some information about that entity which is the part of the certificate. A CSR is always signed with the private key corresponding to the public key it carries.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
