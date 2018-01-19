@@ -34,7 +34,9 @@ DSA key generation is a two part process so we can use pipe to use single comman
 # openssl dsaparam -genkey 2048 | openssl dsa -out dsa.key -aes128
 
 
-CSR is a formal request asking a CA to sign a certificate and it contains public key of the entity requesting and some information about that entity which is the part of the certificate. A CSR is always signed with the private key corresponding to the public key it carries. CSR creation is usually an interactive process during which we provide elements of the certificate distinguished name.If we want a field to be empty , we enter single dot(.).  If we press Return openssl will provide the default value. 
+CSR is a formal request asking a CA to sign a certificate and it contains public key of the entity requesting and some information about 
+that entity which is the part of the certificate. A CSR is always signed with the private key corresponding to the public key it
+carries. CSR creation is usually an interactive process during which we provide elements of the certificate distinguished name.If we want a field to be empty , we enter single dot(.).  If we press Return openssl will provide the default value. 
 
 
 
