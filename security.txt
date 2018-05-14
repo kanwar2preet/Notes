@@ -1,0 +1,3 @@
+SQl injection prevention: --use prepared statements
+                          -- Stored procedures    
+                          -- Escape all user supplied input
