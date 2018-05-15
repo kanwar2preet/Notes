@@ -1,1 +1,2 @@
 Jenkins plugins : Roles stratergy plugins for managing Roles
+                 --delivery pipeline plugin
