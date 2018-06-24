@@ -1,6 +1,6 @@
 openssl is bacically a toolkit which consists of number of utilities.
 
-If we build openssl package, private/ and certs/ directory will be empty.By default open ssl doesnot contain any root certificates.
+If we build openssl package, private/ and certs/ directory will be empty by default open ssl doesnot contain any root certificates.
 
 
 Key and Certifiacte Management: 
