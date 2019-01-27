@@ -11,6 +11,8 @@ Confident Changes
  array of one or more objects that defines the builders that will be used to create machine images for this template
  
  
-post-processors (optional) is an array of one or more objects that defines the various post-processing steps to take with the built images. 
+post-processors (optional) is an array of one or more objects that defines the various post-processing steps to take 
+with the built images. 
 
-provisioners (optional) is an array of one or more objects that defines the provisioners that will be used to install and configure software for the machines created by each of the builders
+provisioners (optional) is an array of one or more objects that defines the provisioners that will be used to install and 
+configure software for the machines created by each of the builders
