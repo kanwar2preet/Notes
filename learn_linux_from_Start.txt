@@ -1,0 +1,30 @@
+How to install new package in redhat.
+
+1. yum install <name of package>
+   example: yum install nano.
+
+2. how to check mode of security endhanced linux 
+   look for mode in output of sestatus, it will look like below.
+   
+   [root@learning ~]# sestatus
+   SELinux status:                 enabled
+   SELinuxfs mount:                /sys/fs/selinux
+   SELinux root directory:         /etc/selinux
+   Loaded policy name:             targeted
+   Current mode:                   permissive
+   Mode from config file:          permissive
+   Policy MLS status:              enabled
+   Policy deny_unknown status:     allowed
+   Max kernel policy version:      28
+   [root@learning ~]#
+   
+ 3. Change selinux mode to enforcing mode
+    
+    setenforce 1 # this will change current mode only to enforcing mode
+
+ 4. how to remove package in redhat 
+    yum remove <name of the package>
+    yum remove nano
+    
+ 5. list installed packages on operating system.
+     yum list installed 
