@@ -1,0 +1,9 @@
+Two types of users we can create,
+
+normal user which is used to access the cluster externally, using the API. 
+
+For instance, through "kubeclt", this user is not managed using objects. 
+
+second type: a service user, which is managed by an object in Kubernetes.
+
+User is used to authenticate within the cluster. For instance inside a pod or from.
