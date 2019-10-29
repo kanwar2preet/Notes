@@ -16,3 +16,9 @@ Version that should be used: TLS 1.2
 
 helpful sites::
 https://www.sslshopper.com/article-most-common-openssl-commands.html
+
+
+find size of hidden files in directory
+
+du -hs .[!.]*
+
