@@ -1,0 +1,3 @@
+help(re)
+
+dir(re) gives u methods etc available
