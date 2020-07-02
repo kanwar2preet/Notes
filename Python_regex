@@ -1,3 +1,36 @@
 help(re)
 
 dir(re) gives u methods etc available
+
+\n - new line character
+\t - Tab character
+\U - stands for Unicode
+
+
+
+raw string: 
+
+Helps to deal with path etc as we need to interpret them properly
+
+rawstring = r"C:\Users\tasks"
+
+compile method in regurar expression.
+
+match 4 digits in a row
+
+s = r"\d{4}"
+
+when you want to search for the same pattern over and over again perhaps in different target strings --->
+
+use re.compile to create regex object which then can be used with find all method to look for occurrences of the same pattern inside various 
+target strings
+
+
+
+So in conclusion you can use the compile method when you are searching for the same pattern over and over again and in multiple 
+target strings. On the other hand you can use all the other methods  without worrying about compiling the regular expression first 
+whenever you are searching for various patterns inside the same target string says the compiling is done automatically with each method.
+
+Search method() only returns the first occurance of the pattern in the string
+
+
