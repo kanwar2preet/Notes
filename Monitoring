@@ -1,0 +1,3 @@
+use dd command to test the io latency.
+
+smaller ios will have lower latency and larger ios will have high latency but handle large amount of data.
